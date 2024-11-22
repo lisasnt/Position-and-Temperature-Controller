@@ -1,0 +1,2 @@
+../Core/Src/ntc.c:13:8:get_ntc_volt	40	static
+../Core/Src/ntc.c:44:19:get_ntc_temp_zone	24	static

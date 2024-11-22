@@ -1,0 +1,2 @@
+../Core/Src/ptc.c:15:8:get_ptc_volt	56	static
+../Core/Src/ptc.c:53:20:get_ptc_temp_zone	24	static

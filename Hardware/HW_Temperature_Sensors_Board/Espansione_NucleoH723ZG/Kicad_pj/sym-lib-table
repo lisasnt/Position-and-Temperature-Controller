@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name "2022-02-08_08-04-12")(type "Legacy")(uri "C:/Users/maurizio.rossi/Documents/Laboratorio Elettronico/KiCAD/UltraLibrarian/ul_SQ4532AEY-T1-GE3/KiCAD/2022-02-08_08-04-12/2022-02-08_08-04-12.lib")(options "")(descr ""))
+  (lib (name "local_library")(type "KiCad")(uri "${KIPRJMOD}/local_library.kicad_sym")(options "")(descr ""))
+)

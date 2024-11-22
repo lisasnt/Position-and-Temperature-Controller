@@ -1,0 +1,477 @@
+EESchema Schematic File Version 4
+LIBS:step_motor_board-cache
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+Text Label 4500 3150 0    50   ~ 0
+24V
+Text Label 4500 3450 0    50   ~ 0
+5V
+Text Label 4500 3550 0    50   ~ 0
+3V3
+$Comp
+L Connector:Conn_01x08_Male J2
+U 1 1 61EB1BBA
+P 4300 2100
+F 0 "J2" H 4450 2550 50  0000 C CNN
+F 1 "Encoder Connector" V 4050 2050 50  0000 C CNN
+F 2 "" H 4300 2100 50  0001 C CNN
+F 3 "~" H 4300 2100 50  0001 C CNN
+	1    4300 2100
+	1    0    0    -1  
+$EndComp
+Text Label 4500 1900 0    50   ~ 0
+24V
+Text Label 4500 2000 0    50   ~ 0
+CLK+
+Text Label 4500 2100 0    50   ~ 0
+CLK-
+Text Label 4500 2200 0    50   ~ 0
+D+
+Text Label 4500 2300 0    50   ~ 0
+D-
+Text Label 4500 2400 0    50   ~ 0
+PST
+Text Label 4500 2500 0    50   ~ 0
+DIR
+$Comp
+L Connector:Conn_01x14_Male J3
+U 1 1 61EB7269
+P 4300 4400
+F 0 "J3" H 4450 5150 50  0000 C CNN
+F 1 "Nucleo Connector" V 4150 4400 50  0000 C CNN
+F 2 "" H 4300 4400 50  0001 C CNN
+F 3 "~" H 4300 4400 50  0001 C CNN
+	1    4300 4400
+	1    0    0    -1  
+$EndComp
+Text Label 4500 3050 0    50   ~ 0
+24V
+Text Label 4500 2950 0    50   ~ 0
+24V
+Text Label 4500 2850 0    50   ~ 0
+24V
+Text Label 4500 4200 0    50   ~ 0
+5V
+Text Label 4500 4300 0    50   ~ 0
+5V
+Text Label 4500 4400 0    50   ~ 0
+CLK
+Text Label 4500 4500 0    50   ~ 0
+CLK
+Text Label 4500 4600 0    50   ~ 0
+DATA_IN
+Text Label 4500 4700 0    50   ~ 0
+DATA_IN
+Text Label 4500 4800 0    50   ~ 0
+PST
+Text Label 4500 4900 0    50   ~ 0
+PST
+Text Label 4500 5000 0    50   ~ 0
+DIR
+Text Label 4500 5100 0    50   ~ 0
+DIR
+$Comp
+L Interface_UART:MAX488E U1
+U 1 1 61EBF962
+P 6450 2650
+F 0 "U1" H 6700 3200 50  0000 C CNN
+F 1 "MAX488E" H 6700 3100 50  0000 C CNN
+F 2 "" H 6450 2050 50  0001 C CNN
+F 3 "https://datasheets.maximintegrated.com/en/ds/MAX1487E-MAX491E.pdf" H 6210 3100 50  0001 C CNN
+	1    6450 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R R1
+U 1 1 61EC0835
+P 7050 2500
+F 0 "R1" H 7120 2546 50  0000 L CNN
+F 1 "100" H 7120 2455 50  0000 L CNN
+F 2 "" V 6980 2500 50  0001 C CNN
+F 3 "~" H 7050 2500 50  0001 C CNN
+	1    7050 2500
+	1    0    0    1   
+$EndComp
+Wire Wire Line
+	6850 2350 6850 2450
+Wire Wire Line
+	6850 2550 6850 2650
+Wire Wire Line
+	6850 2650 7050 2650
+Text Label 7300 2350 0    50   ~ 0
+D+
+Text Label 7300 2650 0    50   ~ 0
+D-
+Text Label 7000 2850 0    50   ~ 0
+CLK+
+Text Label 7000 2750 0    50   ~ 0
+CLK-
+$Comp
+L power:GND #PWR0104
+U 1 1 61EC2D83
+P 6450 3150
+F 0 "#PWR0104" H 6450 2900 50  0001 C CNN
+F 1 "GND" H 6455 2977 50  0000 C CNN
+F 2 "" H 6450 3150 50  0001 C CNN
+F 3 "" H 6450 3150 50  0001 C CNN
+	1    6450 3150
+	1    0    0    -1  
+$EndComp
+Text Label 5900 2550 2    50   ~ 0
+DATA_INPUT
+Wire Wire Line
+	5900 2550 6050 2550
+Text Label 5900 2750 2    50   ~ 0
+CLK
+Wire Wire Line
+	5900 2750 6050 2750
+$Comp
+L Device:C C1
+U 1 1 61EC4996
+P 6250 2000
+F 0 "C1" V 5998 2000 50  0000 C CNN
+F 1 "0.1u" V 6089 2000 50  0000 C CNN
+F 2 "" H 6288 1850 50  0001 C CNN
+F 3 "~" H 6250 2000 50  0001 C CNN
+	1    6250 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0105
+U 1 1 61EC525F
+P 6100 2000
+F 0 "#PWR0105" H 6100 1750 50  0001 C CNN
+F 1 "GND" H 6105 1827 50  0000 C CNN
+F 2 "" H 6100 2000 50  0001 C CNN
+F 3 "" H 6100 2000 50  0001 C CNN
+	1    6100 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 2000 6450 2150
+$Comp
+L power:+5V #PWR0106
+U 1 1 61EC5C5F
+P 6450 1850
+F 0 "#PWR0106" H 6450 1700 50  0001 C CNN
+F 1 "+5V" H 6465 2023 50  0000 C CNN
+F 2 "" H 6450 1850 50  0001 C CNN
+F 3 "" H 6450 1850 50  0001 C CNN
+	1    6450 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6450 1850 6450 2000
+Connection ~ 6450 2000
+$Comp
+L power:PWR_FLAG #FLG0102
+U 1 1 61EC9D48
+P 3150 1700
+F 0 "#FLG0102" H 3150 1775 50  0001 C CNN
+F 1 "PWR_FLAG" V 3150 1850 50  0000 L CNN
+F 2 "" H 3150 1700 50  0001 C CNN
+F 3 "~" H 3150 1700 50  0001 C CNN
+	1    3150 1700
+	0    1    1    0   
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0103
+U 1 1 61ECAFC0
+P 3150 2000
+F 0 "#FLG0103" H 3150 2075 50  0001 C CNN
+F 1 "PWR_FLAG" V 3150 2128 50  0000 L CNN
+F 2 "" H 3150 2000 50  0001 C CNN
+F 3 "~" H 3150 2000 50  0001 C CNN
+	1    3150 2000
+	0    1    1    0   
+$EndComp
+$Comp
+L Connector:Conn_01x08_Male J1
+U 1 1 61EB9DAA
+P 4300 3150
+F 0 "J1" H 4450 3650 50  0000 C CNN
+F 1 "Side Connector" V 4150 3100 50  0000 C CNN
+F 2 "" H 4300 3150 50  0001 C CNN
+F 3 "~" H 4300 3150 50  0001 C CNN
+	1    4300 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0107
+U 1 1 61ED60A9
+P 3150 1700
+F 0 "#PWR0107" H 3150 1550 50  0001 C CNN
+F 1 "+5V" H 3165 1873 50  0000 C CNN
+F 2 "" H 3150 1700 50  0001 C CNN
+F 3 "" H 3150 1700 50  0001 C CNN
+	1    3150 1700
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3V3 #PWR0108
+U 1 1 61ED72D7
+P 3150 2000
+F 0 "#PWR0108" H 3150 1850 50  0001 C CNN
+F 1 "+3V3" H 3165 2173 50  0000 C CNN
+F 2 "" H 3150 2000 50  0001 C CNN
+F 3 "" H 3150 2000 50  0001 C CNN
+	1    3150 2000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3150 1700 3050 1700
+Connection ~ 3150 1700
+Text Label 3050 1700 2    50   ~ 0
+5V
+Text Label 3050 2000 2    50   ~ 0
+3V3
+Wire Wire Line
+	3050 2000 3150 2000
+Connection ~ 3150 2000
+$Comp
+L power:+24V #PWR0101
+U 1 1 61EE0CFD
+P 3150 2300
+F 0 "#PWR0101" H 3150 2150 50  0001 C CNN
+F 1 "+24V" H 3165 2473 50  0000 C CNN
+F 2 "" H 3150 2300 50  0001 C CNN
+F 3 "" H 3150 2300 50  0001 C CNN
+	1    3150 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0101
+U 1 1 61EE15CF
+P 3150 2300
+F 0 "#FLG0101" H 3150 2375 50  0001 C CNN
+F 1 "PWR_FLAG" V 3150 2450 50  0000 L CNN
+F 2 "" H 3150 2300 50  0001 C CNN
+F 3 "~" H 3150 2300 50  0001 C CNN
+	1    3150 2300
+	0    1    1    0   
+$EndComp
+Text Label 3050 2300 2    50   ~ 0
+24V
+Wire Wire Line
+	3050 2300 3150 2300
+Connection ~ 3150 2300
+$Comp
+L power:GND #PWR0102
+U 1 1 61EE6F71
+P 3150 2500
+F 0 "#PWR0102" H 3150 2250 50  0001 C CNN
+F 1 "GND" H 3155 2327 50  0000 C CNN
+F 2 "" H 3150 2500 50  0001 C CNN
+F 3 "" H 3150 2500 50  0001 C CNN
+	1    3150 2500
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:PWR_FLAG #FLG0104
+U 1 1 61EE73AC
+P 3150 2500
+F 0 "#FLG0104" H 3150 2575 50  0001 C CNN
+F 1 "PWR_FLAG" V 3150 2628 50  0000 L CNN
+F 2 "" H 3150 2500 50  0001 C CNN
+F 3 "~" H 3150 2500 50  0001 C CNN
+	1    3150 2500
+	0    1    1    0   
+$EndComp
+Text Label 3050 2500 2    50   ~ 0
+GND
+Wire Wire Line
+	3050 2500 3150 2500
+Text Label 4500 3250 0    50   ~ 0
+GND
+Text Label 4500 3350 0    50   ~ 0
+GND
+Text Label 4500 1800 0    50   ~ 0
+GND
+Wire Wire Line
+	4850 1800 4500 1800
+Text Label 4500 3800 0    50   ~ 0
+GND
+Text Label 4500 3900 0    50   ~ 0
+GND
+Text Label 4500 4000 0    50   ~ 0
+GND
+Text Label 4500 4100 0    50   ~ 0
+GND
+$Comp
+L EncoderLib:CD4050B U2
+U 1 1 61EAD9ED
+P 6450 4800
+F 0 "U2" H 6450 5775 50  0000 C CNN
+F 1 "CD4050B" H 6450 5684 50  0000 C CNN
+F 2 "" H 6450 4800 50  0001 C CNN
+F 3 "" H 6450 4800 50  0001 C CNN
+	1    6450 4800
+	1    0    0    -1  
+$EndComp
+Text Label 6000 4150 2    50   ~ 0
+DATA_IN
+Text Label 6000 4250 2    50   ~ 0
+DATA_INPUT
+NoConn ~ 6150 4350
+NoConn ~ 6150 4450
+NoConn ~ 6150 4550
+NoConn ~ 6150 4650
+NoConn ~ 6750 4150
+NoConn ~ 6750 4250
+NoConn ~ 6750 4450
+NoConn ~ 6750 4550
+NoConn ~ 6750 4650
+NoConn ~ 6750 4750
+Connection ~ 3150 2500
+$Comp
+L power:GND #PWR0103
+U 1 1 61EB321F
+P 6100 4750
+F 0 "#PWR0103" H 6100 4500 50  0001 C CNN
+F 1 "GND" H 6105 4577 50  0000 C CNN
+F 2 "" H 6100 4750 50  0001 C CNN
+F 3 "" H 6100 4750 50  0001 C CNN
+	1    6100 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 4750 6100 4750
+$Comp
+L power:+3V3 #PWR0109
+U 1 1 61EB4332
+P 6000 4050
+F 0 "#PWR0109" H 6000 3900 50  0001 C CNN
+F 1 "+3V3" H 6015 4223 50  0000 C CNN
+F 2 "" H 6000 4050 50  0001 C CNN
+F 3 "" H 6000 4050 50  0001 C CNN
+	1    6000 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 4050 6150 4050
+Text Notes 4250 1800 2    50   ~ 0
+WH\n
+Text Notes 4150 1900 0    50   ~ 0
+BN\n
+Text Notes 4150 2250 0    50   ~ 0
+GY\n
+Text Notes 4150 2300 0    50   ~ 0
+YE\n\n\n
+Text Notes 4150 2100 0    50   ~ 0
+GN\n\n
+Text Notes 4150 2350 0    50   ~ 0
+PK\n
+Text Notes 4150 2550 0    50   ~ 0
+BU\n\n
+Text Notes 4150 2600 0    50   ~ 0
+RD\n
+Wire Wire Line
+	7050 2350 6850 2350
+Wire Wire Line
+	7050 2350 7300 2350
+Connection ~ 7050 2350
+Wire Wire Line
+	7050 2650 7300 2650
+Connection ~ 7050 2650
+Wire Wire Line
+	6400 2000 6450 2000
+Wire Wire Line
+	6000 4150 6150 4150
+Wire Wire Line
+	6150 4250 6000 4250
+Wire Wire Line
+	7000 2850 6850 2850
+Wire Wire Line
+	7000 2750 6850 2750
+Wire Notes Line
+	2800 1450 2800 2750
+Wire Notes Line
+	2800 2750 3800 2750
+Wire Notes Line
+	5300 1450 5300 5250
+Wire Notes Line
+	3800 1450 3800 5250
+Wire Notes Line
+	7700 1450 7700 5250
+Wire Notes Line
+	2800 1450 7700 1450
+Wire Notes Line
+	3800 5250 7700 5250
+Text Notes 3050 1350 0    50   ~ 10
+POWER FLAGS
+Text Notes 4350 1350 0    50   ~ 10
+CONNECTORS
+Text Notes 6450 1350 0    50   ~ 10
+ICs
+$Comp
+L power:GND #PWR?
+U 1 1 61EE7B40
+P 4850 1800
+F 0 "#PWR?" H 4850 1550 50  0001 C CNN
+F 1 "GND" H 4855 1627 50  0000 C CNN
+F 2 "" H 4850 1800 50  0001 C CNN
+F 3 "" H 4850 1800 50  0001 C CNN
+	1    4850 1800
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR?
+U 1 1 61EE86A8
+P 4850 2500
+F 0 "#PWR?" H 4850 2250 50  0001 C CNN
+F 1 "GND" H 4855 2327 50  0000 C CNN
+F 2 "" H 4850 2500 50  0001 C CNN
+F 3 "" H 4850 2500 50  0001 C CNN
+	1    4850 2500
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4850 2500 4500 2500
+$Comp
+L Connector:Conn_01x08_Male J?
+U 1 1 61EEE892
+P 3050 7000
+F 0 "J?" H 3150 7600 50  0000 C CNN
+F 1 "Conn_01x08_Male" H 3150 7500 50  0000 C CNN
+F 2 "" H 3050 7000 50  0001 C CNN
+F 3 "~" H 3050 7000 50  0001 C CNN
+	1    3050 7000
+	1    0    0    -1  
+$EndComp
+Text Label 3250 6700 0    50   ~ 0
+VDD
+Text Label 3250 6800 0    50   ~ 0
+VDD
+Text Label 3250 6900 0    50   ~ 0
+TORQ_OUT
+Text Label 3250 7000 0    50   ~ 0
+TORQ_OUT
+Text Label 3250 7100 0    50   ~ 0
+GND
+Text Label 3250 7200 0    50   ~ 0
+GND
+Text Label 3250 7300 0    50   ~ 0
+VREF
+Text Label 3250 7400 0    50   ~ 0
+VREF
+Text Notes 3650 6700 0    50   ~ 0
+WHITE\n
+Text Notes 3650 6900 0    50   ~ 0
+BROWN
+Text Notes 3650 7100 0    50   ~ 0
+BLACK\n
+Text Notes 3650 7300 0    50   ~ 0
+GREY
+$EndSCHEMATC
